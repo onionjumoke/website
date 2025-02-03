@@ -36,6 +36,34 @@
         .content {
             max-width: 800px;
             margin: auto;
+            text-align: center;
+        }
+        .ui-cell {
+            background: white;
+            border: 1px solid #C7C7CC;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        .ui-cell img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .ui-cell a {
+            text-decoration: none;
+            color: #007AFF;
+            font-weight: bold;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            background: black;
         }
     </style>
 </head>
@@ -44,30 +72,89 @@
     <div class="striped-background">
         <div class="content">
             <h2>Download Links</h2>
-            <p><a href="http://onionjumoke.us.to/CSettings SD.zip">CSettings (SD)</a></p>
-            <p><a href="http://onionjumoke.us.to/CSettings iPad.zip">CSettings for iPad (SD)</a></p>
-            <p><a href="http://onionjumoke.us.to/DarkOS-3.1.3-Icons-Only.theme.zip">DarkOS 3.1.3 (Icons Only, iPod, SD)</a></p>
-            <p><a href="http://onionjumoke.us.to/DarkOS-3.1.3-Full.theme.zip">DarkOS 3.1.3 (Full, iPod SD)</a></p>
-            <p><a title="iTunes 9 Media Player Gadget" href="http://onionjumoke.us.to/itunes9.gadget">iTunes 9 Media Player Gadget</a></p>
-          <p><video controls="controls" width="512" height="512">
-<source src="http://onionjumoke.us.to/GadgetAd.mp4" type="video/mp4" /></video></p>
+            <div class="ui-cell"><img src="placeholder.png" alt="Icon"><a href="http://onionjumoke.us.to/CSettings SD.zip">CSettings (SD)</a></div>
+            <div class="ui-cell"><img src="placeholder.png" alt="Icon"><a href="http://onionjumoke.us.to/CSettings iPad.zip">CSettings for iPad (SD)</a></div>
+            <div class="ui-cell"><img src="placeholder.png" alt="Icon"><a href="http://onionjumoke.us.to/DarkOS-3.1.3-Icons-Only.theme.zip">DarkOS 3.1.3 (Icons Only, iPod, SD)</a></div>
+            <div class="ui-cell"><img src="placeholder.png" alt="Icon"><a href="http://onionjumoke.us.to/DarkOS-3.1.3-Full.theme.zip">DarkOS 3.1.3 (Full, iPod SD)</a></div>
+            <div class="ui-cell"><img src="placeholder.png" alt="Icon"><a href="http://onionjumoke.us.to/itunes9.gadget">iTunes 9 Media Player Gadget</a></div>
+            <p><video controls="controls" width="300" height="150">
+            <source src="http://onionjumoke.us.to/GadgetAd.mp4" type="video/mp4" /></video></p>
             <h2>Guides</h2>
-            <h4>Installing SBSettings themes</h4>
-            <p>1. Drop your zip in /private/var/mobile/Library/SBSettings/Themes</p>
-            <p>2. Decompress it, then delete the zip</p>
-            <p>3. Open SBSettings</p>
-            <p>4. Apply the theme</p>
-            <p>5. Respring and you're done.</p>
-
-            <h4>Installing Themes, in general.</h4>
-            <p>1. Drop your zip in /Library/Themes</p>
-            <p>2. Decompress it, then delete the zip</p>
-            <p>3. Open Winterboard</p>
-            <p>4. Apply the theme</p>
-            <p>5. Respring and you're done.</p>
+            <div class="ui-cell">
+                <img src="placeholder.png" alt="Icon">
+                <div>
+                    <strong>Installing SBSettings themes</strong>
+                    <p>1. Drop your zip in /private/var/mobile/Library/SBSettings/Themes</p>
+                    <p>2. Decompress it, then delete the zip</p>
+                    <p>3. Open SBSettings</p>
+                    <p>4. Apply the theme</p>
+                    <p>5. Respring and you're done.</p>
+                </div>
+            </div>
+            <div class="ui-cell">
+                <img src="placeholder.png" alt="Icon">
+                <div>
+                    <strong>Installing Themes, in general</strong>
+                    <p>1. Drop your zip in /Library/Themes</p>
+                    <p>2. Decompress it, then delete the zip</p>
+                    <p>3. Open Winterboard</p>
+                    <p>4. Apply the theme</p>
+                    <p>5. Respring and you're done.</p>
+                </div>
+            </div>
+            <div class="ui-cell"><img src="placeholder.png" alt="Icon"><a href="https://x.com/onionjmoke">Twitter</a></div>
             
-            <p><a href="https://x.com/onionjmoke">Twitter</a></p>
+            <h2>Snake Game</h2>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <script>
+                const canvas = document.getElementById("gameCanvas");
+                const ctx = canvas.getContext("2d");
+                let snake = [{x: 200, y: 200}];
+                let dx = 20;
+                let dy = 0;
+                let food = {x: 100, y: 100};
+                
+                function drawSnake() {
+                    ctx.fillStyle = "lime";
+                    snake.forEach(part => {
+                        ctx.fillRect(part.x, part.y, 20, 20);
+                    });
+                }
+                
+                function moveSnake() {
+                    const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+                    snake.unshift(head);
+                    if (head.x === food.x && head.y === food.y) {
+                        food.x = Math.floor(Math.random() * 20) * 20;
+                        food.y = Math.floor(Math.random() * 20) * 20;
+                    } else {
+                        snake.pop();
+                    }
+                }
+                
+                function drawFood() {
+                    ctx.fillStyle = "red";
+                    ctx.fillRect(food.x, food.y, 20, 20);
+                }
+                
+                function update() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    drawFood();
+                    moveSnake();
+                    drawSnake();
+                }
+                
+                document.addEventListener("keydown", event => {
+                    if (event.key === "ArrowUp" && dy === 0) { dx = 0; dy = -20; }
+                    if (event.key === "ArrowDown" && dy === 0) { dx = 0; dy = 20; }
+                    if (event.key === "ArrowLeft" && dx === 0) { dx = -20; dy = 0; }
+                    if (event.key === "ArrowRight" && dx === 0) { dx = 20; dy = 0; }
+                });
+                
+                setInterval(update, 150);
+            </script>
         </div>
     </div>
 </body>
 </html>
+
