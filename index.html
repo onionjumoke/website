@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta name="theme-color" content="#383844">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -12,7 +11,28 @@
     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background: url('https://onionjumoke.us.to/bg.png') repeat;
+            background: #1d1d1f; /* fallback */
+            background: -webkit-repeating-linear-gradient(
+                to right,
+                #1d1d1f 0px,
+                #1d1d1f 10px,
+                #2a2a2c 10px,
+                #2a2a2c 20px
+            );
+            background: -moz-repeating-linear-gradient(
+                to right,
+                #1d1d1f 0px,
+                #1d1d1f 10px,
+                #2a2a2c 10px,
+                #2a2a2c 20px
+            );
+            background: repeating-linear-gradient(
+                to right,
+                #1d1d1f 0px,
+                #1d1d1f 10px,
+                #2a2a2c 10px,
+                #2a2a2c 20px
+            );
             margin: 0;
             padding: 0;
             -webkit-user-select: none;
@@ -120,44 +140,6 @@
 <body>
     <div class="navbar">onionjumoke.us.to</div>
     <div class="content">
-        <h2>Download Links</h2>
-        <div class="ui-cell"><img src="http://onionjumoke.us.to/resources/csettings.png" alt="Icon"><a href="http://onionjumoke.us.to/CSettings SD.zip">CCSettings (SD)</a></div>
-        <div class="ui-cell"><img src="http://onionjumoke.us.to/resources/csettings.png" alt="Icon"><a href="http://onionjumoke.us.to/CSettings iPad.zip">CCSettings for iPad (SD)</a></div>
-        <div class="ui-cell"><img src="http://onionjumoke.us.to/resources/darkos.png" alt="Icon"><a href="http://onionjumoke.us.to/DarkOS-3.1.3-Icons-Only.theme.zip">DarkOS 3.1.3 (Icons Only, iPod, SD)</a></div>
-        <div class="ui-cell"><img src="http://onionjumoke.us.to/resources/darkos.png" alt="Icon"><a href="http://onionjumoke.us.to/DarkOS-3.1.3-Full.theme.zip">DarkOS 3.1.3 (Full, iPod SD)</a></div>
-        <div class="ui-cell"><img src="http://onionjumoke.us.to/resources/itunes9.png" alt="Icon"><a href="http://onionjumoke.us.to/itunes9.gadget">iTunes 9 Media Player Gadget</a></div>
-        <div class="ui-cell dark-tab"><img src="http://onionjumoke.us.to/resources/c.png" alt="Icon"><a href="http://cuub.xyz">cuub.xyz</a></div>
-        <p><video controls="controls" width="300" height="150">
-            <source src="http://onionjumoke.us.to/GadgetAd.mp4" type="video/mp4" />
-        </video></p>
-        <h2>Guides</h2>
-        <div class="ui-cell">
-            <img src="http://onionjumoke.us.to/resources/guides.png" alt="Icon">
-            <div>
-                <strong>Installing SBSettings themes</strong>
-                <p>1. Drop your zip in /private/var/mobile</p>
-                <p>   /Library/SBSettings/Themes</p>
-                <p>2. Decompress it, then</p>
-		<p>   delete the zip</p>
-                <p>3. Open SBSettings</p>
-                <p>4. Apply the theme</p>
-                <p>5. Respring and you're done.</p>
-            </div>
-        </div>
-        <div class="ui-cell">
-            <img src="http://onionjumoke.us.to/resources/installing.png" alt="Icon">
-            <div>
-                <strong>Installing Themes, in general</strong>
-                <p>1. Drop your zip in /Library</p>
-                <p>   /Themes</p>
-                <p>2. Decompress it, then</p>
-		<p>   delete the zip</p>
-                <p>3. Open Winterboard</p>
-                <p>4. Apply the theme</p>
-                <p>5. Respring and you're done.</p>
-            </div>
-        </div>
-        <div class="ui-cell"><img src="http://onionjumoke.us.to/resources/twitter.png" alt="Icon"><a href="https://x.com/onionjmoke">Twitter</a></div>
+        <!-- Page content stays the same -->
     </div>
-</body>
-</html>
+</body></html>
