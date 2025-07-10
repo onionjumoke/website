@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Firefox Installer for Windows 7</title>
+  <link rel="stylesheet" href="https://unpkg.com/7.css">
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Tahoma, Geneva, sans-serif;
+      overflow: hidden;
+      background: #000 url('https://ia804603.us.archive.org/10/items/Windows-wallcollection/1920x1200_%28Windows_7%29.jpg') no-repeat center center;
+      background-size: cover;
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='https://ia804603.us.archive.org/10/items/Windows-wallcollection/1920x1200_%28Windows_7%29.jpg', sizingMethod='scale');
+    }
+    #win {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      resize: both;
+    }
+    .window-body {
+      padding: 1em;
+      height: expression(this.parentNode.offsetHeight - 35 + 'px');
+      overflow: auto;
+      zoom: 1;
+    }
+    .url-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    .url-item {
+      margin: 0.5em 0;
+      padding: 0.5em;
+      background: #fff;
+      border: 1px solid #ccc;
+      text-align: center;
+      cursor: pointer;
+      zoom: 1;
+    }
+    .url-item:hover {
+      background-color: #e0f0ff;
+    }
+    .url-item a {
+      text-decoration: none;
+      color: #000080;
+      font-weight: bold;
+    }
+    .title-bar-controls button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="window" id="win">
+    <div class="title-bar" id="titleBar">
+      <div class="title-bar-text">Favorite Links</div>
+      <div class="title-bar-controls">
+        <button onclick="location.href='https://www.google.com'; return false;"></button>
+        <button onclick="toggleSize(); return false;"></button>
+        <button onclick="location.href='https://bing.com'; return false;"></button>
+      </div>
+    </div>
+    <div class="window-body" id="content">
+      <ul class="url-list">
+        <li class="url-item"><a href="https://onionjumoke.us.to/win7/firefoxsetup.exe target="_blank">Firefox Setup (.exe)</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    (function() {
+      var win = document.getElementById('win');
+      var title = document.getElementById('titleBar');
+      var isDragging = false;
+      var offsetX = 0;
+      var offsetY = 0;
+
+      if (title.attachEvent) {
+        title.attachEvent('onmousedown', startDrag);
+        document.attachEvent('onmouseup', stopDrag);
+        document.attachEvent('onmousemove', drag);
+      } else {
+        title.addEventListener('mousedown', startDrag);
+        document.addEventListener('mouseup', stopDrag);
+        document.addEventListener('mousemove', drag);
+      }
+
+      function startDrag(e) {
+        isDragging = true;
+        offsetX = (e.clientX || window.event.clientX) - win.offsetLeft;
+        offsetY = (e.clientY || window.event.clientY) - win.offsetTop;
+      }
+
+      function stopDrag() {
+        isDragging = false;
+      }
+
+      function drag(e) {
+        if (!isDragging) return;
+        var clientX = (e.clientX || window.event.clientX);
+        var clientY = (e.clientY || window.event.clientY);
+        win.style.left = (clientX - offsetX) + 'px';
+        win.style.top = (clientY - offsetY) + 'px';
+      }
+
+      window.toggleSize = function() {
+        if (win.style.width === '100%') {
+          win.style.width = '400px';
+          win.style.height = '300px';
+        } else {
+          win.style.width = '100%';
+          win.style.height = '100%';
+        }
+      };
+    })();
+  </script>
+</body>
+</html>
