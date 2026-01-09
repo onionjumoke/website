@@ -1,0 +1,103 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./styles.css">
+    <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+  <title>Blog</title>
+<style>
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    background: url(stripe.png);
+    border-bottom: 1px solid #2c2c2c;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    z-index: 9999;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+label {
+	color:rgb(0, 0, 0);
+}
+p {
+  font-size: 14px;
+	color: white;
+  line-height: 120%;
+}
+.bigicon {
+  width: 128px;
+  height: 128px;
+}
+.navbar img {
+
+}
+label {
+	color:white;
+}
+p {
+	color: white;
+}
+.icon {
+	width: 80px;
+	height: 80px;
+}
+</style>
+<script type="text/javascript">
+function setupStandaloneLinks() {
+  var links = document.getElementsByTagName("a");
+
+  for (var i = 0; i < links.length; i++) {
+    (function(link) {
+      link.onclick = function(e) {
+        var href = link.getAttribute("href");
+
+        if (!href || link.className.indexOf("external") !== -1) {
+          return true; 
+        }
+
+        window.location = href;
+        return false;
+      };
+    })(links[i]);
+  }
+}
+
+window.onload = setupStandaloneLinks;
+</script>
+</head>
+<body class="pinstripe" style="overflow-x:hidden;background-image:url(./background.png);">
+    <div class="navbar">
+      <a href="../">
+      <img src="./back.png" style="width: 66px; height: 44px;position:fixed;left: 0.1%;top: -0.25%;">
+      </a>
+      <a href="./index.html">
+      <img src="./oj.gif">
+      </a>
+    </div>
+<br>
+<br>
+	<panel>
+        <fieldset>
+          <a href="./articles/mc.html">
+            <img class="icon" src="./img/mc.png">
+            <div>
+              <div>
+                <label>Minecraft on OSX 10.6.8</label>
+              </div>
+            </div>
+          </a>
+        </fieldset>
+    </panel>
+</body>	
+</html>
