@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styles.css">
+    <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <title>oj - MCPPCL</title>
+    <style>
+        video {
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+	    .navbar {
+    	    position: fixed;
+    	    top: 0;
+    	    left: 0;
+        	right: 0;
+        	height: 44px;
+        	background: url(../stripe.png);
+        	border-bottom: 1px solid #292835;
+        	font-size: 17px;
+        	font-weight: bold;
+        	color: #ffffff;
+        	text-align: center;
+        	display: -webkit-box;
+        	-webkit-box-align: center;
+        	-webkit-box-pack: center;
+        	z-index: 9999;
+        	text-shadow: 0 -1px 0 rgba(255,255,255,0.25);
+        	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	    }
+        .bigicon {
+            border-radius: 20px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        label {
+	color:white;
+}
+p {
+	color: white;
+}
+.icon {
+	width: 80px;
+	height: 80px;
+}
+    </style>
+<script type="text/javascript">
+function setupStandaloneLinks() {
+  var links = document.getElementsByTagName("a");
+
+  for (var i = 0; i < links.length; i++) {
+    (function(link) {
+      link.onclick = function(e) {
+        var href = link.getAttribute("href");
+
+        if (!href || link.className.indexOf("external") !== -1) {
+          return true; 
+        }
+
+        window.location = href;
+        return false;
+      };
+    })(links[i]);
+  }
+}
+
+window.onload = setupStandaloneLinks;
+</script>
+</head>
+<body class="pinstripe" style="overflow-x:hidden;background-image:url(../background.png);">
+	    <div class="navbar">
+      <a href="../">
+      <img src="./back.png" style="width: 66px; height: 44px;position:fixed;left: 0.1%;top: -0.25%;">
+      </a>
+      MCPPCL
+    </div>
+<br>
+<br>
+<br>
+	<panel>
+ <fieldset>
+            <div>
+                <img class="icon" style="float: left;margin-top: -2.5%" src="../images/depictions/mcppcl.png">
+                <p style="text-align: right;font-size:large;margin-top: 5%;line-height: 18px;">MCPPCL</p>
+                <p style="text-align: right;margin-top: 0%;line-height: 2px;">Launcher para MCPPC.</p>
+            </div>
+      </fieldset>
+        <fieldset>
+            <div>
+                <p>Este es un launcher para MCPPC, podés conseguir MCPPC por <a href="https://macintoshgarden.org/games/minecraft-powerpc-resource-archival-page">acá (macintoshgarden)</a>.</p>
+            </div>
+            <div>
+                <p>Este es mi primer programa de OSX <strong>nativo</strong>, es compatible con 10.5 para arriba y solamente Intel (Soporte para PPC planeado)</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <a href="../files/MCPPCL.dmg">
+            <img class="icon" src="../images/tiny-goto.png">
+                <div>
+                    <div>
+                        <label>Descargar Instalador DMG</label>
+                    </div>
+                </div>
+            </a>
+        </fieldset>
+    </panel>
+</body>
+</html>
