@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320, initial-scale=1 user-scalable=no">
+    <title>iso 26</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ISO26">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    font-size: 18px;
+    font-weight: bold;
+    background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(rgba(255, 255, 255, 0)));
+    color: rgb(27, 27, 27);
+    text-align: center;
+    display: -webkit-box;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    z-index: 9999;
+}
+.nv-btn {
+    position: absolute;
+    top: 0;
+    margin-top: 4px;
+    margin-left:4px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: rgb(27, 27, 27);
+    float: left;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    border: #b6b6b6 1px solid;
+    left:0%;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+.nv-btn:hover {
+    -webkit-transform: scale(1.1);
+}
+.nv-btn:active {
+    -webkit-transform: scale(1.2);
+}
+#nv-btn-right {
+    right: 0%;
+    position: absolute;
+    top: 0;
+    margin-top: 4px;
+    margin-right:4px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    color: rgb(38, 41, 43);
+    float: left;
+    background-color: rgba(44, 178, 255, 0.85);
+    border-radius: 50%;
+    border: #008be7 1px solid;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+#nv-btn-right:hover {
+    -webkit-transform: scale(1.1);
+}
+#nv-btn-right:active {
+    -webkit-transform: scale(1.2);
+}
+.botbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    height: 40px;
+    width: 275px;
+    font-size: 16px;
+    background-color: rgba(233, 233, 233, 0.85);
+    margin-bottom: 10px;
+    border:#b6b6b6 1px solid;
+    border-radius: 20px;
+    color: rgba(43, 43, 43, 0.85);
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: start;
+    text-indent: 15px;
+
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+.botbar img {
+    width:15px;
+    height: 15px;
+    margin-right:10px;
+}
+.icn {
+    width:60px;
+    height: 60px;
+    border-radius: 12px;
+    margin-left: -2px;
+}
+.p2 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.subt {
+    color:rgb(92, 92, 92);
+}
+body {
+    margin-top:44px;
+    background-color: #eaeaea;
+}
+</style>
+</head>
+<body class="pinstripe">
+<div class="navbar">
+    <a href="../index.html">
+    <div class="nv-btn">
+        <img src="./left-arrow.svg" alt="<" style="width:22px;height:20px;margin-right: 4px;margin-top:4px">
+    </div>
+    </a>
+    onionjumoke.us.to
+    <a href="#">
+    <div id="nv-btn-right">
+        <img src="./checkmark.svg" alt="v" style="width:26px;height:26px;margin-top:4px">
+    </div>
+    </a>
+</div>
+<panel>
+    <fieldset>
+        <div>
+            <div>
+                <img src="./lowq/oj.jpeg" class="icn">
+                <p class="p2">Welcome.</p>
+                <p class="subt">Here, you'll find most of my projects.</p>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <a href="../depictions/appstar.html">
+            <img src="./lowq/appstar.jpeg"style="margin-top:6px;margin-left:6px" class="icon">
+            <div>
+                <div>
+                    <label>appstar</label>
+                </div>
+            </div>
+        </a>
+        <a href="../depictions/mcppcl.html">
+            <img src="./lowq/mc.jpeg"style="margin-top:6px;margin-left:6px" class="icon">
+            <div>
+                <div>
+                    <label>MCPPCL</label>
+                </div>
+            </div>
+        </a>
+    </fieldset>
+    <label>Other Stuff</label>
+    <fieldset>
+        <a href="../blog/index.html">
+            <img src="./lowq/news.jpeg" style="margin-top:6px;margin-left:6px" class="icon">
+            <div>
+                <div>
+                    <label>Blog</label>
+                </div>
+            </div>
+        </a>
+        <a href="http://onionjumoke.testing4fun.xyz/ISO26">
+            <img src="./wifi.jpeg" style="margin-top:6px;margin-left:6px" class="icon">
+            <div>
+                <div>
+                    <label>iSO26 Test</label>
+                </div>
+            </div>
+        </a>
+        <a href="../demo/index.html">
+            <img src="./wifi.jpeg" style="margin-top:6px;margin-left:6px" class="icon">
+            <div>
+                <div>
+                    <label>iSO26 Test</label>
+                </div>
+            </div>
+        </a>
+        <a href="../index.html">
+            <img src="../images/tiny-back.png" style="margin-top:6px;margin-left:6px" class="icon">
+            <div>
+                <div>
+                    <label>Go Back</label>
+                </div>
+            </div>
+        </a>
+    </fieldset>
+</panel>
+</body>
+</html>
