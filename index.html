@@ -43,6 +43,12 @@
 	}
     </style>
 <script type="text/javascript">
+  var ua = navigator.userAgent || navigator.vendor || window.opera;
+  if (/(Windows NT|Macintosh|Linux)/i.test(ua) && !/Android|iPhone|iPad|iPod|Mobile/i.test(ua)) {
+    window.location.replace('pc/index.html');
+  }
+</script>
+<script type="text/javascript">
 function setupStandaloneLinks() {
   var links = document.getElementsByTagName("a");
 
