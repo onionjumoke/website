@@ -15,6 +15,7 @@ body {
     font-family: Arial, sans-serif;
     background: #1b1b1b;
     color: #dedce6;
+    overflow-y: hidden;
 }
 .page {
   display: flex;
@@ -132,18 +133,22 @@ direction: ltr;
     background: linear-gradient(0deg,rgba(34, 34, 34, 1) 0%, rgb(48, 48, 48) 100%);
     border-bottom: 1px solid #313131;
     border-top: 1px solid #505050;
-    padding: 8px 16px;
+    padding: 0 16px;
     border-radius: 8px;
     margin-bottom: 16px;
-    height: 50px;
+    height: 60px;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
 }
 .topbar a {
     color: #dedce6;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    height: 100%;
-    
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
 }
 .topbar a + a::before {
     content: '';
@@ -153,16 +158,13 @@ direction: ltr;
     background-color: #505050;
     vertical-align: middle;
     margin-right: 12px;
-    margin-left: 10px;
+    margin-left: -10px;
 }
-.topbar span {
+.topbar a span {
     font-weight: 200;
     font-family: HelveticaThin;
     font-size: 30px;
-    line-height: 50px;
     margin: 0;
-        display: inline-block;
-        vertical-align: middle;
 }
 .topbar img {
     height: 50px;
@@ -170,11 +172,12 @@ direction: ltr;
     margin-left: -8px;
 }
 .topbar-right {
-    right: 35px;
-    position: absolute;
-    align-items: right;
-    font-size: 14px;
-    color: #888;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-family: HelveticaThin;
+    font-size: 30px;
 }
 table {
   border-collapse: collapse;
@@ -194,7 +197,6 @@ tr:hover {
   background-color: rgba(0,0,0,0.05);
 }
 .not-sidebar {
-    margin-top: 44px;
   width: 312px;
   font-family: Arial, sans-serif;
   overflow-y: auto;
