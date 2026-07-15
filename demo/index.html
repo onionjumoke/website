@@ -1,6 +1,6 @@
 <html>
 <head>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="../styles.css">
     <meta name="theme-color" content="#000000">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,48 +9,9 @@
   <title>oj - demo</title>
 <!--NAVBAR/BARRA DE NAVEGACION-->
 <style>
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 44px;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAArCAIAAAA2QHWOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuOWxu2j4AAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAMAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAAo5MAAOgDAACjkwAA6AMAAFBhaW50Lk5FVCA1LjEuOQADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAABdUNkYj53BAQAAAFBJREFUGFddjrEKgEAMQ0P//9ccnR0c3NyVszVpOe64ISR5hVBs+2HndRsQ5kF5efSccjK3b+706sq6Y+Juz9tyYwi1ufSexfXD4PTs5MrAD/RWcOgUg6x4AAAAAElFTkSuQmCC);
-    border-bottom: 1px solid #49586B;
-    font-size: 17px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    display: -webkit-box;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    z-index: 9999;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
-    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-}
+
 </style>
-<script type="text/javascript">       //SCRIPT TO AVOID OPENING OTHER URLS ON SAFARI, SO THE WHOLE "APP" FEELING STAYS TRUE, THIS IS FOR WEBAPPS ONLY!!!
-function setupStandaloneLinks() {     //SCRIPT PARA EVITAR ABRIR URLS EN SAFARI, ASI ESA ILUSION DE QUE ES UNA APP SE MANTIENE, ESTO ES SOLO PARA WEBAPPS!!
-  var links = document.getElementsByTagName("a");
-
-  for (var i = 0; i < links.length; i++) {
-    (function(link) {
-      link.onclick = function(e) {
-        var href = link.getAttribute("href");
-
-        if (!href || link.className.indexOf("external") !== -1) {
-          return true; 
-        }
-
-        window.location = href;
-        return false;
-      };
-    })(links[i]);
-  }
-}
-
-window.onload = setupStandaloneLinks;
-</script>
+<script src="../script.js"></script>
 </head>
 <body class="pinstripe" style="overflow-x:hidden">
     <div class="navbar">onionjumoke.us.to</div>

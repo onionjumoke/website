@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=320, initial-scale=1 user-scalable=no">
     <title>iso 26</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="ISO26">
@@ -13,23 +13,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="./favicon.ico">
     <style>
-        .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 44px;
-    font-size: 18px;
-    font-weight: bold;
-    background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(rgba(255, 255, 255, 0)));
-    color: rgb(27, 27, 27);
-    text-align: center;
-    display: -webkit-box;
-    font-family: Arial, Helvetica, sans-serif;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    z-index: 9999;
-}
+        
 .nv-btn {
     position: absolute;
     top: 0;
@@ -135,28 +119,7 @@ body {
     background-color: #eaeaea;
 }
 </style>
-<script type="text/javascript">
-function setupStandaloneLinks() {
-  var links = document.getElementsByTagName("a");
-
-  for (var i = 0; i < links.length; i++) {
-    (function(link) {
-      link.onclick = function(e) {
-        var href = link.getAttribute("href");
-
-        if (!href || link.className.indexOf("external") !== -1) {
-          return true; 
-        }
-
-        window.location = href;
-        return false;
-      };
-    })(links[i]);
-  }
-}
-
-window.onload = setupStandaloneLinks;
-</script>
+<script src="../script.js"></script>
 </head>
 <body class="pinstripe">
 <div class="navbar">
