@@ -5,9 +5,10 @@
       "bundle_id": "com.onionjumoke.codepad",
       "version": "0.8",
       "icon": "icons/codepad.png",
-      "description": "An IDE for iPads running OS 3.2 - iOS 7/8",
+      "description": "WARNING: iPad only! An IDE for iPads running OS 3.2 - iOS 7/8",
       "ipa": "ipas/codepad.ipa",
-      "category": "Utilities"
+      "category": "Utilities",
+      "size": "325K"
     },
     {
       "name": "nuBrowse (legacy)",
@@ -16,25 +17,28 @@
       "icon": "icons/nubrowse-old.png",
       "description": "A UIWebView browser for iPhoneOS 3.1.3 and up",
       "ipa": "ipas/nubrowse-old.ipa",
-      "category": "Utilities"
+      "category": "Utilities",
+      "size": "90K"
     },
     {
       "name": "OnionJumoke Store",
       "bundle_id": "com.onionjumoke.store",
       "version": "1.0",
       "icon": "icons/onionjumoke-store.png",
-      "description": "Browse and install apps from the OAP repository.",
+      "description": "Browse and install apps from the OAP repository. Bug fixes and improvements.",
       "ipa": "ipas/onionjumoke-store.ipa",
-      "category": "Utilities"
+      "category": "Utilities",
+      "size": "251K"
     },
     {
       "name": "nuBrowse2",
       "bundle_id": "com.onionjumoke.nubrowse2",
       "version": "1.0",
       "icon": "icons/nubrowse2.png",
-      "description": "A tabbed web browser for iOS 4.2+ with bookmarks, history, and dual search engines.",
+      "description": "A tabbed web browser for iOS 4.2+ with up to 20 tabs, bookmarks, history, and dual search engines.",
       "ipa": "ipas/nubrowse2.ipa",
-      "category": "Utilities"
+      "category": "Utilities",
+      "size": "176K"
     }
   ]
 }
