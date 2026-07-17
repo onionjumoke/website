@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
     <meta name="theme-color" content="#000000">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -10,7 +10,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="HandheldFriendly" content="true">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <title>oj - nuBrowse</title>
+    <title>oj - nuBrowse (legacy)</title>
     <style>
         video {
             border-radius: 5px;
@@ -32,14 +32,14 @@ p {
 	height: 80px;
 }
     </style>
-<script src="../../script.js"></script>
+<script src="../../js/script.js"></script>
 </head>
-<body class="pinstripe" style="overflow-x:hidden;background-image:url(../background.png);">
+<body class="pinstripe" style="overflow-x:hidden;background-image:url(../../assets/images/background.png);">
 	    <div class="navbar">
       <a href="../../apps/index.html">
-      <img src="./back.png" style="width: 66px; height: 44px;position:fixed;left: 0.1%;top: -0.25%;">
+      <img src="../../assets/images/back.png" style="width: 66px; height: 44px;position:fixed;left: 0.1%;top: -0.25%;">
       </a>
-      nuBrowse
+      nuBrowse (legacy)
     </div>
 <br>
 <br>
@@ -47,8 +47,8 @@ p {
 	<panel>
  <fieldset>
             <div>
-                <img class="icon" style="float: left;margin-top: -2.5%" src="../../images/depictions/nubrowse.png">
-                <p style="text-align: right;font-size:large;margin-top: 5%;line-height: 18px;">nuBrowse 0.1</p>
+                <img class="icon" style="float: left;margin-top: -2.5%" src="../../assets/images/depictions/nubrowse.png">
+                <p style="text-align: right;font-size:large;margin-top: 5%;line-height: 18px;">nuBrowse (legacy) 0.1</p>
                 <p style="text-align: right;margin-top: 0%;line-height: 2px;">a new browser for iOS 4</p>
             </div>
       </fieldset>
@@ -58,10 +58,7 @@ p {
             </div>
             <div>
                 <p style="text-align: center;font-size:large;margin-top: 5%;line-height: 18px;"><strong>WARNING</strong></p>
-                <p>You first NEED to go to your WI-FI settings and change your proxy to manual and set this:</p>
-                <p>Domain: muellers-software.org</p>
-                <p>Port: 3080</p>
-                <p>Credentials: None (until it asks you to, once it does you set USER: guest PASS: noindex, after that you go back to your proxy settings and turn credentials on, and then you put the previously mentioned credentials.)</p>
+                <p>You first NEED to install TLSFix, or else general browsing wont work and you'll be limited to just Wiby (no shade but duckduckgo html clears)</p>
             </div>
         </fieldset>
         <fieldset>
@@ -71,8 +68,8 @@ p {
             </div>
         </fieldset>
         <fieldset>
-            <a href="../../files/nuBrowse.ipa">
-            <img class="icon" src="../../images/tiny-goto.png">
+            <a href="../../oap/ipas/nubrowse-old.ipa">
+            <img class="icon" src="../../assets/images/tiny-goto.png">
                 <div>
                     <div>
                         <label>Download IPA</label>

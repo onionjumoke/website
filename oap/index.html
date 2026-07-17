@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/mobile.css">
+    <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>oap - onionjumoke</title>
+    <style>
+        p, label { color: white; }
+        fieldset > a > div > div > label { color: white; }
+        fieldset > a > div > div > label.detail { color: #8e8e93; }
+        fieldset > a > div > div > label.lower { color: #8e8e93; }
+        #app-list img.icon { border-radius: 12px; }
+    </style>
+</head>
+<body class="pinstripe" style="overflow-x:hidden;background-image:url(../assets/images/background.png);">
+    <div class="navbar">oap - onionjumoke.us.to</div>
+    <br><br><br>
+    <panel>
+        <label>Available Apps</label>
+        <fieldset id="app-list"></fieldset>
+    </panel>
+    <script>
+    var apps = [
+        {
+            "name": "CodePad",
+            "version": "0.8",
+            "icon": "icons/codepad.png",
+            "category": "Utilities",
+            "ipa": "ipas/codepad.ipa"
+        },
+        {
+            "name": "nuBrowse (legacy)",
+            "version": "1.0",
+            "icon": "icons/nubrowse-old.png",
+            "category": "Utilities",
+            "ipa": "ipas/nubrowse-old.ipa"
+        },
+        {
+            "name": "OnionJumoke Store",
+            "version": "1.0",
+            "icon": "icons/onionjumoke-store.png",
+            "category": "Utilities",
+            "ipa": "ipas/onionjumoke-store.ipa"
+        },
+        {
+            "name": "nuBrowse2",
+            "version": "1.0",
+            "icon": "icons/nubrowse2.png",
+            "category": "Utilities",
+            "ipa": "ipas/nubrowse2.ipa"
+        }
+    ];
+    var list = document.getElementById('app-list');
+    for (var i = 0; i < apps.length; i++) {
+        var app = apps[i];
+        var a = document.createElement('a');
+        a.href = app.ipa;
+        a.download = app.ipa.split('/').pop();
+        a.title = 'Click to download ' + app.name;
+        var img = document.createElement('img');
+        img.className = 'icon';
+        img.src = app.icon;
+        img.onerror = function(){ this.src = 'icons/Icon.png'; };
+        a.appendChild(img);
+        var div1 = document.createElement('div');
+        var div2 = document.createElement('div');
+        var l1 = document.createElement('label');
+        l1.textContent = app.name;
+        var l2 = document.createElement('label');
+        l2.className = 'detail';
+        l2.textContent = app.version || '';
+        var l3 = document.createElement('label');
+        l3.className = 'lower';
+        l3.textContent = app.category || '';
+        div2.appendChild(l1);
+        div2.appendChild(l2);
+        div2.appendChild(l3);
+        div1.appendChild(div2);
+        a.appendChild(div1);
+        list.appendChild(a);
+    }
+    </script>
+</body>
+</html>

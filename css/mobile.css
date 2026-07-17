@@ -5,7 +5,7 @@ panel>input[type="submit"],fieldset>a>div>div>input[type="checkbox"],fieldset>a>
     left: 0;
     right: 0;
     height: 44px;
-    background: url(stripe.png);
+    background: url(../assets/images/stripe.png);
     border-bottom: 1px solid #2c2c2c;
     font-size: 18px;
     font-weight: bold;
