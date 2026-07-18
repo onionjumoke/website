@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/mobile.css">
+    <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>oj - OAP</title>
+    <style>
+        pre { background: #1a1a1a; color: #8e8e93; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 12px; overflow-x: auto; white-space: pre-wrap; }
+        code { background: #1a1a1a; color: #f7786f; padding: 2px 5px; border-radius: 3px; font-family: monospace; }
+        label { color: white; }
+        p { color: white; }
+    </style>
+    <script src="../js/script.js"></script>
+</head>
+<body class="pinstripe" style="overflow-x:hidden;background-image:url(../assets/images/background.png);">
+    <div class="navbar">
+        <a href="../">
+            <img src="../assets/images/back.png" style="width: 66px; height: 44px;position:fixed;left: 0.1%;top: -0.25%;">
+        </a>
+        OAP
+    </div>
+    <br><br><br>
+    <panel>
+        <fieldset>
+            <div>
+                <p style="text-align: center;font-size:x-large;">OnionJumoke App Protocol</p>
+                <p style="text-align: center;">A simple IPA distribution protocol</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <p style="text-align: center;font-size:large;margin-top: 5%;line-height: 18px;">What is OAP?</p>
+                <p>OAP (OnionJumoke App Protocol) is a lightweight, static protocol for distributing iOS IPA files. It uses a simple JSON manifest to list available apps, their metadata, and download links. The protocol is designed to work with GitHub Pages or any static file server.</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <p style="text-align: center;font-size:large;margin-top: 5%;line-height: 18px;">How It Works</p>
+                <p>1. A server hosts a JSON file (<code>apps.json</code>) containing the app manifest.</p>
+                <p>2. The client (e.g. the onionjumoke app) fetches the JSON from a configured URL.</p>
+                <p>3. Each app entry includes: name, bundle ID, version, icon, description, IPA path, category, and size.</p>
+                <p>4. The client displays the apps and provides download/install functionality.</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <p style="text-align: center;font-size:large;margin-top: 5%;line-height: 18px;">JSON Format</p>
+                <pre>{
+  "apps": [
+    {
+      "name": "App Name",
+      "bundle_id": "com.example.app",
+      "version": "1.0",
+      "icon": "icons/app.png",
+      "description": "Description text.",
+      "ipa": "ipas/app.ipa",
+      "category": "Utilities",
+      "size": "100K"
+    }
+  ]
+}</pre>
+                <p>The JSON is hosted at <code>example.com/oap/apps.json</code>. All paths (icon, ipa) are relative to that URL.</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <p style="text-align: center;font-size:large;margin-top: 5%;line-height: 18px;">Setting Up an OAP Server Locally</p>
+                <p>1. Create the directory structure:</p>
+                <pre>oap/
+  apps.json
+  icons/
+  ipas/</pre>
+                <p>2. Create <code>apps.json</code> with your app entries.</p>
+                <p>3. Place your IPA files in <code>ipas/</code> and icons in <code>icons/</code>.</p>
+                <p>4. Serve the directory with any HTTP server:</p>
+                <pre>python3 -m http.server 8080</pre>
+                <p>5. Point your OAP client to <code>http://your-ip:8080/oap/apps.json</code>.</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <p style="text-align: center;font-size:large;margin-top: 5%;line-height: 18px;">Requirements</p>
+                <p>- A web server (Apache, Nginx, Python http.server, GitHub Pages, etc.)</p>
+                <p>- IPA files must be unsigned or correctly signed for the target device</p>
+                <p>- Icons should be PNG format, 144x144px recommended</p>
+                <p>- MIME types must be set correctly for .ipa files (application/octet-stream)</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <p style="text-align: center;font-size:large;margin-top: 5%;line-height: 18px;">OAP Server Example</p>
+                <p>The official OAP server is hosted at <code>oap/</code> on this website. You can view the manifest at <a href="../oap/apps.json" style="color:#f7786f;">oap/apps.json</a> and browse available apps at <a href="../oap/index.html" style="color:#f7786f;">oap/</a>.</p>
+            </div>
+        </fieldset>
+    </panel>
+</body>
+</html>

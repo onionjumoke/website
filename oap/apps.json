@@ -23,7 +23,7 @@
     {
       "name": "the onionjumoke app",
       "bundle_id": "com.onionjumoke.store",
-      "version": "1.0",
+      "version": "1.1",
       "icon": "icons/onionjumoke-store.png",
       "description": "Browse and install apps from the OAP repository. Bug fixes and improvements.",
       "ipa": "ipas/onionjumoke-store.ipa",
@@ -33,12 +33,22 @@
     {
       "name": "nuBrowse2",
       "bundle_id": "com.onionjumoke.nubrowse2",
-      "version": "1.0",
+      "version": "1.1",
       "icon": "icons/nubrowse2.png",
       "description": "A tabbed web browser for iOS 4.2+ with up to 20 tabs, bookmarks, history, and dual search engines.",
       "ipa": "ipas/nubrowse2.ipa",
       "category": "Utilities",
-      "size": "176K"
+      "size": "178K"
+    },
+    {
+      "name": "Installer",
+      "bundle_id": "com.onionjumoke.installer",
+      "version": "1.0",
+      "icon": "icons/installer.png",
+      "description": "An IPA installer for jailbroken iOS 4.2+ devices.",
+      "ipa": "ipas/installer.ipa",
+      "category": "Utilities",
+      "size": "239K"
     }
   ]
 }
